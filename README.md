@@ -1,7 +1,21 @@
 # HEIG_DAI_PW1
 
-Pratical Work 1 in group of 2
+# Purpose
 
+HEIG-DAI_PW1 is a CLI developed by two students as part of the practical work number 1 for the DAI course at HEIG-VD.
+
+Its purpose is to process images from a supported file format. It currently offers two type of processing:
+
+- Color inversion: 
+  - inverts the RGB values of each pixel.
+- Black and white conversion: 
+  - produces a black-and-white picture, with a choice of gradient made by user
+
+## Supported formats
+
+For now, the following image format is supported:
+
+- BMP
 
 # Lien de la discussion:
 
