@@ -1,17 +1,36 @@
 package ch.heigvd;
 
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
-public class Main {
-    static void main() {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        IO.println(String.format("Hello and welcome!"));
+import ch.heigvd.commands.Gradient;
+import ch.heigvd.commands.Invert;
+import java.io.File;
+import picocli.CommandLine;
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            IO.println("i = " + i);
-        }
+@CommandLine.Command(
+        description = "Process an input image and write the result to an output image.",
+        version = "1.0.0",
+        showDefaultValues = true,
+        subcommands = {
+                Invert.class,
+                Gradient.class,
+                CommandLine.HelpCommand.class,
+        },
+        scope = CommandLine.ScopeType.INHERIT,
+        mixinStandardHelpOptions = true)
+public class Main {
+    public static void main(String[] args) {
+        // Use the JAR file name in the "Usage:" line (cosmetic)
+        String jarFilename =
+                new File(Main.class.getProtectionDomain().getCodeSource().getLocation().getPath())
+                        .getName();
+
+        // TODO: setCaseInsensitiveEnumValuesAllowed
+        // à enlever si on a que un format img (sert à ignoré la casse pour les enums)
+        int exitCode =
+                new CommandLine(new Main())
+                        .setCommandName(jarFilename)
+                        .setCaseInsensitiveEnumValuesAllowed(true)
+                        .execute(args);
+
+        System.exit(exitCode);
     }
 }
