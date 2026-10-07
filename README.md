@@ -1,6 +1,23 @@
 # HEIG_DAI_PW1
 
-# Purpose
+# TODO
+- ajouter des exemples dans le repository avec un répertoire contenant les images traitées
+
+# Lien de la discussion:
+
+- [PW1](https://github.com/orgs/heigvd-dai-26/discussions/5)
+- [PW1-DOC](https://heigvd-dai-26.github.io/practical-work/pw1.html)
+
+# Présentation
+
+- Préparer le PC pour la présentation avec environnement etc... pour test en live: [@noelebosss]
+- Introduction: [@ens-coder]
+- Présentation de la gestion des I/O par le biais des classes BMPIO et IMAGES: @noelebosss
+- Présentation du processing d'images: @ens-coder 
+- Exemple en live: @noelebosss
+- Conclusion: @ens-coder
+
+# Abstract
 
 HEIG-DAI_PW1 is a CLI developed by two students as part of the practical work number 1 for the DAI course at HEIG-VD.
 
@@ -14,44 +31,27 @@ Its purpose is to process images from a supported file format. It currently offe
 ## Supported formats
 
 For now, the following image format is supported:
-
 - BMP
-
-# Lien de la discussion:
-
-- [PW1](https://github.com/orgs/heigvd-dai-26/discussions/5)
-- [PW1-DOC](https://heigvd-dai-26.github.io/practical-work/pw1.html)
-
-# <cli-name> — Image processing CLI
-
-> Command-line tool to invert colours and apply a black-to-white gradient to images.
-> Practical work 1 — DAI 2026-2027, HEIG-VD.
-
-<!-- Badges optional: build, Java version -->
-
-## Table of contents
-- [Authors](#authors)
-- [Purpose](#purpose)
-- [Features](#features)
-- [Requirements](#requirements)
-- [Clone and build](#clone-and-build)
-- [Usage](#usage)
-- [Examples](#examples)
-- [Error handling](#error-handling)
-- [Implementation choices](#implementation-choices)
-- [Tests](#tests)
-- [Project structure](#project-structure)
-- [Dependencies](#dependencies)
-- [Contributing](#contributing)
-- [Sources and AI usage](#sources-and-ai-usage)
 
 ## Authors
 - Noé Léderrey — [@noelebosss](https://github.com/noelebosss)
 - Enis Sadiku <last name> — [@ens-coder](https://github.com/ens-coder)
 
-## Purpose
-<!-- 2-3 sentences: what problem the tool solves, why image processing -->
-# traduire et compléter
-L'outil permet de traiter des images en .bmp efficacement.
-On peut soit inverser les couleurs d'une image 
 
+
+# IMG-PROCESSOR-2000
+IMG-PROCESSOR-2000 is designed to be used easily. You just need to have a JRE (at leat version 25.04
+another version is not officialy supported) and follow these steps:
+
+//utiliser la commande pour executer le jar et les options (présenter)
+(on suppose qu'il est déjà présent à cette étape)
+// photo illustration
+
+## Configuration - build
+To use properly IMG-PROCESSOR-2000 you need to configure correctly the environement. 
+
+//cloner le projet
+
+// clean
+
+// créer package avec ./mvnw
