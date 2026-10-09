@@ -17,6 +17,8 @@ public class BmpIO {
     private static final int OFFSET_BITS_PER_PIXEL = 28;
     private static final int OFFSET_COMPRESSION = 30;
 
+
+
     public static Image load(InputStream in) throws IOException {
         byte[] header = in.readNBytes(HEADER_SIZE);
         if (header.length < HEADER_SIZE) {
