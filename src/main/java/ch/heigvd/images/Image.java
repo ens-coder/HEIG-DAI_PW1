@@ -3,7 +3,7 @@ package ch.heigvd.images;
 // In-memory representation of a 24-bit BMP image
 public class Image {
 
-    private final byte[] header; // copied unchanged when saving
+    private byte[] header; // copied unchanged when saving
     private final int width;
     private final int height;
 
@@ -44,4 +44,11 @@ public class Image {
     public int[][] getBlue() {
         return blue;
     }
+
+    public void setRGB(int x, int y, int r, int g, int b) {
+        red[y][x] = r;
+        green[y][x] = g;
+        blue[y][x] = b;
+    }
+
 }
