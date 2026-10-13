@@ -49,9 +49,9 @@ img\
 
 For example, if you want to apply grey filter at 50% luminosity on ref.bmp picture:
 
-`java -jar .\target\HEIG-DAI_PW1-1.0-SNAPSHOT.jar gradient -i .\img\original\ref.bmp -o .\img\processed\ref-invert.bmp`
+`java -jar .\target\HEIG-DAI_PW1-1.0-SNAPSHOT.jar gradient -p -i .\img\original\ref.bmp -o .\img\processed\ref-invert.bmp`
 
->note: use the SNAPSHOT version jar because it will garanty you to have all the dependances
+> **note:** use the SNAPSHOT version jar because it will garanty you to have all the dependances
 > in the jar
 
 ## Configuration - build
@@ -78,6 +78,32 @@ to use depends on your OS:
 
 > **note:** Maven may be download some requirements
 
+
+**2.1) dev mode**
+
+If you want, you can use another option for enhance project (DEV):
+
+Package the project:
+- Windows:  `mvnw.cmd package`
+- Linux:  `mvnw package`
+
+Clean file of target package:
+- Windows:  `mvnw.cmd clean`
+- Linux:  `mvnw clean`
+
+Test:
+- Windows:  `mvnw.cmd test`
+- Linux:  `mvnw test`
+
+
+
+**2.2) dependency of Maven**
+
+The project contain theses dependencies:
+- PICOCLI (interface)
+- Junit (to do unit test)
+
+
 **3) generate project and environnement**:
 
 You need to open a command line (cmd or powershell on Windows and Terminal in linux):
@@ -85,7 +111,13 @@ You need to open a command line (cmd or powershell on Windows and Terminal in li
 - `.\mvnw.cmd package`
 - `.\mvnw package` (for Linux)
 
-![maven-1](doc/maven-1.png)
+![maven-3](doc/maven-3.png)
+
+
+# Sources
+- DAI: courses
+- https://en.wikipedia.org/wiki/BMP_file_format
+- PRG2: laboratory
 
 # Related link for the project:
 - [PW1 - discussion](https://github.com/orgs/heigvd-dai-26/discussions/5)
