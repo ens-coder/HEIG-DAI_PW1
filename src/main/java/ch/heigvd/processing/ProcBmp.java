@@ -27,6 +27,10 @@ public class ProcBmp {
         img_bmp = file_bmp.read(in);
     }
 
+    public ProcBmp(Image img) {
+        img_bmp = img;
+    }
+
     public boolean isLoaded() {
         return img_bmp != null;
     }
