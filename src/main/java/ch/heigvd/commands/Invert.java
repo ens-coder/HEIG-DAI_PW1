@@ -17,6 +17,7 @@ public class Invert implements Callable<Integer> {
 
     @Override
     public Integer call() {
+        System.out.println("invert: " + files.getInputFile() + " -> " + files.getOutputFile());
         ProcBmp img = new ProcBmp(files.getInputFile());
         if (!img.isLoaded()) {
             return 1;
